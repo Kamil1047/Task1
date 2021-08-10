@@ -1,23 +1,23 @@
 import "./UserDetails.css";
 
 const UserDetails = (props) => {
-  const onUserdataHandler = () => {
-    return console.log(props.userdata.title);
+  const onUserDataHandler = (userInformation) => {
+    console.log(userInformation);
   };
 
-  const Data = props.userdata.map((userval, index) => {
+  return props.userData.map((userVal, index) => {
     return (
-      <div key={index} className="user">
-        <div className="font-color">
-          <div>{userval.id}</div>
-          <div>{userval.title}</div>
-          <div>{userval.completed.toString()}</div>
+      <div onClick={() => onUserDataHandler(userVal)} key={index}>
+        <div className="user">
+          <div className="font-color">
+            <div>{userVal.id}</div>
+            <div>{userVal.title}</div>
+            <div>{userVal.completed.toString()}</div>
+          </div>
         </div>
       </div>
     );
   });
-
-  return <div onClick={onUserdataHandler}>{Data}</div>;
 };
 
 export default UserDetails;
