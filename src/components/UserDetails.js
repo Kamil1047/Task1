@@ -1,18 +1,23 @@
 import "./UserDetails.css";
 
 const UserDetails = (props) => {
-  const onClickHandler = () => {
-    alert(`UserId: ${props.id} \n Title: ${props.title}`);
+  const onUserdataHandler = () => {
+    return console.log(props.userdata.title);
   };
-  return (
-    <div onClick={onClickHandler}>
-      <div>
-        <div>{props.userId}</div>
-        <div>{props.title}</div>
-        <div>{props.completed.toString()}</div>
+
+  const Data = props.userdata.map((userval, index) => {
+    return (
+      <div key={index} className="user">
+        <div className="font-color">
+          <div>{userval.id}</div>
+          <div>{userval.title}</div>
+          <div>{userval.completed.toString()}</div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  });
+
+  return <div onClick={onUserdataHandler}>{Data}</div>;
 };
 
 export default UserDetails;

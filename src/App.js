@@ -48,48 +48,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <UserDetails
-        userId={userData[0].userId}
-        id={userData[0].id}
-        title={userData[0].title}
-        completed={userData[0].completed}
-      />
-      <UserDetails
-        userId={userData[1].userId}
-        id={userData[1].id}
-        title={userData[1].title}
-        completed={userData[1].completed}
-      />
-      <UserDetails
-        userId={userData[2].userId}
-        id={userData[2].id}
-        title={userData[2].title}
-        completed={userData[2].completed}
-      />
-      <UserDetails
-        userId={userData[3].userId}
-        id={userData[3].id}
-        title={userData[3].title}
-        completed={userData[3].completed}
-      />
-      <UserDetails
-        userId={userData[4].userId}
-        id={userData[4].id}
-        title={userData[4].title}
-        completed={userData[4].completed}
-      />
-      <UserDetails
-        userId={userData[5].userId}
-        id={userData[5].id}
-        title={userData[5].title}
-        completed={userData[5].completed}
-      />
-      <UserDetails
-        userId={userData[6].userId}
-        id={userData[6].id}
-        title={userData[6].title}
-        completed={userData[6].completed}
-      />
+      <UserDetails userdata={userData} />
     </div>
   );
 };
