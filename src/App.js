@@ -1,5 +1,4 @@
 import UserDetails from "./components/UserDetails";
-
 const App = () => {
   const userData = [
     {
@@ -46,9 +45,12 @@ const App = () => {
     },
   ];
 
+  const getdata = (e) => {
+    return console.log(e);
+  };
   return (
     <div className="App">
-      <UserDetails userData={userData} />
+      <UserDetails userData={userData} onGetData={getdata} />
     </div>
   );
 };
