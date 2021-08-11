@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import UserDetails from "./components/UserDetails";
-import Show from "./components/Show";
 const App = () => {
   const userData = [
     {
@@ -46,24 +44,10 @@ const App = () => {
       completed: false,
     },
   ];
-  const [usdata, setusdata] = useState("");
-  const getdata = (e) => {
-    console.log(e);
-    setusdata(e);
-  };
-
-  const udata = [
-    {
-      title: usdata.title,
-      id: usdata.id,
-      completed: usdata.completed,
-    },
-  ];
 
   return (
     <div className="App">
-      <Show udata={udata} />
-      <UserDetails uData={udata} userData={userData} onGetData={getdata} />
+      <UserDetails userData={userData} />
     </div>
   );
 };
