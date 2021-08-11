@@ -7,22 +7,16 @@ const UserDetails = (props) => {
     //console.log(userInformation);
     setData(userInformation);
   };
-  //   if (data) {
-  //     return (
-  //       <div>
-  //         <h1>{data.title}</h1>
-  //       </div>
-  //     );
-  //   }
+
   props.onGetData(data);
   return props.userData.map((userVal, index) => {
     return (
       <div onClick={() => onUserDataHandler(userVal)} key={index}>
         <div className="user">
           <div className="font-color">
-            <div>{userVal.id}</div>
-            <div>{userVal.title}</div>
-            <div>{userVal.completed.toString()}</div>
+            <div>{`User id: ${userVal.id}`}</div>
+            <div>{`Title: ${userVal.title}`}</div>
+            <div>{`Completed: ${userVal.completed.toString()}`}</div>
           </div>
         </div>
       </div>

@@ -48,6 +48,7 @@ const App = () => {
   ];
   const [usdata, setusdata] = useState("");
   const getdata = (e) => {
+    console.log(e);
     setusdata(e);
   };
 
@@ -62,7 +63,7 @@ const App = () => {
   return (
     <div className="App">
       <Show udata={udata} />
-      <UserDetails userData={userData} onGetData={getdata} />
+      <UserDetails uData={udata} userData={userData} onGetData={getdata} />
     </div>
   );
 };

@@ -8,10 +8,10 @@ const Show = (props) => {
           <div className="user" key={index}>
             <div className="font-color">
               <div>
-                <h3>{`User id: ${val.id}`}</h3>
+                <h3>{`User id: ${val.id || ""}`}</h3>
               </div>
               <div>
-                <h3>{`User Title: ${val.title}`}</h3>
+                <h3>{`User Title: ${val.title || ""}`}</h3>
               </div>
             </div>
           </div>
